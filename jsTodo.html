@@ -42,15 +42,14 @@
         </nav>
     </header>
 
-    <section>
-      <div class="jumbotron ">
-        <h1>Welcome To jsTodo World</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut dolores laudantium provident voluptas fugiat esse recusandae aspernatur, aut aperiam necessitatibus, ducimus culpa aliquid voluptates accusamus placeat corporis, eos laboriosam. Quibusdam?</p>
-
-        <button class="btn btn-success" onclick="document.location.href ='jsTodo.html'">jsTodo List</button>
-
+    <section class="todo-Block">
+      <div class="jumbotron custom-control custom-checkbox">
+       
+              <h1 style="text-align: center; margin-top:-40px;">Tasks</h1>
+              <ul id="todoList">
+              </ul>
+  
       </div>
-
     </section>
 
     <footer>
@@ -58,6 +57,9 @@
             &copy; jsTodo
         </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="todo.js"></script>
 
 </body>
 </html>
