@@ -4,10 +4,12 @@ $.ajax({
     dataType: "json",
     success: function(data) {
         data.forEach(function(task){
-            let todo = `<li class="list" id="${task.id}"><label class="checkbox col-md-8"><input type="checkbox" id="check${task.id} "><span class="checkmark"></span>${task.title}</label></li>`;
+            let todo = `<li class="list" id="${task.id}"><label class="checkbox col-md-8">${task.title}<input type="checkbox" id="check${task.id}"><span class="checkmark"></span></label></li>`;
             $('#todoList').append(todo);
             if (task.completed == true) {
-                $(`#check${task.id}`).attr('checked', '').attr('disabled', '');
+//                 $(`#check${task.id}`).attr('checked', '').attr('disabled', '');
+                   document.getElementById("check"+task.id).disabled = true;
+                   document.getElementById("check"+task.id).checked = true;
             }
 
         });
